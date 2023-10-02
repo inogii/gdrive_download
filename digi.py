@@ -3,8 +3,9 @@ import urllib3
 # Disable warning for unverified HTTPS requests
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-base_url = 'https://tiny.cc/digi-'
-num_episodes = 54
+base_url = input('Please enter the shortener url: ')
+num_episodes = input('Please enter the number of episodes: ')
+num_episodes = int(num_episodes)
 
 # Generate the list of URLs
 l = [base_url + str(i).zfill(2) for i in range(1, num_episodes + 1)]
